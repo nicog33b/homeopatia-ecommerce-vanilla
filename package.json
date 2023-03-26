@@ -1,0 +1,11 @@
+{
+  "name": "homeopatialarrosa",
+  "version": "1.0.0",
+  "description": "tienda de homeopatía, con items naturalistas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nicolás García",
+  "license": "ISC"
+}

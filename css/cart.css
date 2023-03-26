@@ -1,0 +1,120 @@
+
+#cart-container{
+    overflow-x:auto;
+}
+
+
+#cart-container table{
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+#cart-container table thead{
+    font-weight: 700;
+
+
+}
+
+#cart-container table thead td{
+    background-color: #235B35;
+    color: #fff;
+    border:none;
+    padding: 6px 0;
+}
+
+#cart-container table td{
+     border: 1px solid #b6b3b3;
+     text-align: center;
+}
+
+#cart-container table td:nth-child(1){
+width: 100px;
+}
+
+#cart-container table td:nth-child(2),#cart-container table td:nth-child(3){
+    width: 200px;
+}
+
+#cart-container table td:nth-child(4),
+#cart-container table td:nth-child(5),
+#cart-container table td:nth-child(6){
+    width: 170px;
+    }
+
+    #cart-container table tbody img{
+        width: 100px;
+        height: 80px;
+        object-fit: cover;
+    }
+
+    #cart-container table tbody i{
+        color:#cdcfcd;
+    }
+
+    #cart-bottom .cupon>div,
+    #cart-bottom .total>div{
+        border: 1px solid #b6b3b3;
+
+    }
+
+    #cart-bottom .cupon h5,
+    #cart-bottom .total h5{
+        background-color: #235B35;
+        color: #fff;
+        border:none;
+        padding: 6px 0;
+    }
+
+    #cart-bottom .cupon p,
+    #cart-bottom .cupon input{
+        padding: 0 12px;
+    }
+
+    #cart-bottom .cupon input{
+        height: 44px;
+    }
+
+    #cart-bottom .cupon input,
+    #cart-bottom .cupon button,
+    #cart-bottom .total button{
+        margin: 0 0 20px 12px;
+    }
+
+    
+    #cart-bottom .total div>div{
+        padding: 0 12px ;
+    }
+
+    #cart-bottom .total h6{
+color: #2a2a2a;
+    }
+
+    .second-hr{
+        background: #b8b7b3;
+        width: 100%;
+        height: 1px;
+    }
+
+    #cart-bottom .total div>button{
+        margin: 0 12px 20px 0;
+        display: flex;
+        justify-content: flex-end;
+
+    }
+
+    #cart-bottom .total p,
+    #cart-bottom .total input{
+        padding: 0 12px;
+    }
+
+    .cart-shop{
+        color: rgb(12, 17, 32);
+        font-size:33px;
+        text-transform:uppercase ;
+        font-family:oswald;
+        font-weight: 700;
+        text-shadow:0 6px 6px rgba(2,2,2,0.3)
+    }
+

@@ -1,0 +1,185 @@
+
+.headertop{
+    background-color: #212121;
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+.top-left{
+    display: flex;
+    margin: 0px;
+    align-items: center;
+    height: 100%;
+}
+
+.top-left a{
+    color: #fff;
+    margin: 0 10px;
+}
+
+.headertop i{
+    color: #1addac;
+}
+
+.topRight{
+    display: flex;justify-content: flex-end;
+    align-items: center;
+}
+
+.socialIcon{
+    margin-left: 15px;
+}
+
+.socialIcon a {
+    color: #fff;
+    margin:5px; font-size: 18px;;
+
+}
+
+.headertop a{
+    color: #fff;
+}
+
+
+.headerNav li.nav-item .nav-link{
+color: #fff;
+font-size: 1rem;
+font-weight: 600;
+margin: 0 10px;
+}
+
+.searchForm {
+    width: 100%;
+}
+
+.rightSide {
+    margin-left: 3rem;
+}
+
+.rightSide a{
+    display:inline-block;
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+.headerNav a.navbar-brand{
+color: #fff;
+font-family: 'Lobster', cursive !important;
+font-size: 2.5rem;
+}
+
+.headerNav{
+    padding: 20px 0;
+    background-color:#307245 ;
+}
+
+.registerTitle a{
+    text-align: center;
+    font-family: 'Lobster',!important;
+    font-size: 3.6rem;
+    font-weight: 1000;
+
+}
+
+
+.navbar-toggler-icon {
+   color: white;
+}
+
+
+.userUtilities{
+    margin-right: 3rem;
+  }
+  
+  .userUtilities i{
+  color: white;
+  }
+  
+  .navColor{
+    background: #2f4235 ;
+    border-top: 2px solid rgba(17, 17, 17, 0.452);
+    border-bottom:2px solid rgba(17, 17, 17, 0.452); ;
+  }
+  
+  .cart-icon {
+    position: relative;
+  }
+  
+  .cart-icon .badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 0.8em;
+  }
+
+  .searchProduct button i{
+    color: white;
+  }
+  
+  button.navbar-toggler{
+  color: rgb(192, 224, 200);
+  }
+
+  .social-icons i{
+    color: white;
+    margin-right: 0.3rem;
+    margin-left: 0.3rem;
+  }
+
+
+  .social-icons{
+    margin-left: 3rem;
+  }
+
+  div.container .nav-link:hover{
+    color: #f9fd16;
+  }
+
+
+  .container-fluid i{
+    margin-left: 1.2rem;
+    margin-right:1.2rem;
+    
+  }
+
+
+  .container-fluid button{
+    margin-left: 0.3rem;
+    margin-right:0.3rem;
+    
+  }
+
+
+
+/*Arreglo de botones del navbar de arriba en pantallas de celular*/
+  @media(max-width:490px){
+    a.nav-link {
+        align-content: center;
+    }
+
+    
+  .container-fluid i{
+    margin-left: 0.51rem;
+    margin-right:0.51rem;
+    
+  }
+
+  .container-fluid button{
+    margin-left: 0.12rem;
+    margin-right:0.12rem;
+    
+  }
+  }
+
+  @media(max-width:991px){
+    
+  }
+
+  .unstyled {
+    color: inherit;
+    text-decoration: none;
+    border: none;
+  }
+
+

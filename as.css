@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Barlow', sans-serif !important;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+h1,
+h2 {
+    font-family: 'Lobster', cursive !important;
+}
+
+.headertop {
+    background-color: #212121;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.top-left {
+    display: flex;
+    margin: 0px;
+    align-items: center;
+    height: 100%;
+}
+
+.top-left a {
+    color: #fff;
+    margin: 0 10px;
+}
+
+.headertop i {
+    color: #d1c647;
+}
+
+.topRight {
+    display: flex;
+    margin: 0 10px;
+    justify-self: right;
+    height: 100%;
+
+}
+
+.socialIcon {
+    margin-left: 15px;
+}
+
+.socialIcon a {
+    color: #fff;
+    margin: 5px;
+    font-size: 18px;
+}
+
+.headertop a {
+    color: #fff;
+}
+
+.searchForm {
+    width: 50%;
+}
+
+.rightSide {
+    margin-left: 3rem;
+}
+
+.headerNav li.nav-item .nav-link {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 10px;
+}
+
+
+.searchForm {
+    width: 50%;
+}
+
+.rightSide {
+    margin-left: 3rem;
+}
+
+.rightSide a {
+    display: inline-block;
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+.headerNav a.navbar-brand {
+    color: #fff;
+    font-family: 'Lobster', cursive !important;
+    font-size: 2.5rem;
+}
+
+.headerNav {
+    padding: 20px 0;
+    background-color: #34ac3e
+}

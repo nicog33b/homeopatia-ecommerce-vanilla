@@ -1,0 +1,24 @@
+.userOption{
+border: solid 1px black;
+justify-content:left
+}
+
+
+
+@media(max-width:454px){
+    .userOption{
+        width: 30%;
+        height:60px
+    }
+
+}
+
+
+@media(max-width:354px){
+    .userOption{
+        width: 30%;
+        height:90px
+    }
+
+}
+

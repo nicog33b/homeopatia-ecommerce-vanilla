@@ -1,0 +1,66 @@
+
+
+.newarrival{
+    margin:  22px;
+    background-color: green;
+    width: 50px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.col-md-7 h2{
+    color: #555;
+}
+
+.price{
+    color: #FE980F;
+    font-size: 26px;
+    font-weight: bold;
+ 
+
+}
+
+input{
+    border: 1px solid #ccc;
+    font-weight: bold;
+    height: 33px;
+    text-align: center;
+    width: 300px;
+
+}
+
+div.card-body input{
+    width: 60px;
+}
+
+
+.carro{
+    background:#FE980F;
+    color: #FFFFFF;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+
+.compra{
+    background:#3756ac;
+    color: #FFFFFF;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+button.btn.btn-default.carro{
+    align-items: center;
+    align-content: center;
+    width: 90%;
+    height: 100%;
+}
+
+
+button.btn.btn-default.compra{
+    align-items: center;
+    align-content: center;
+    width: 90%;
+    height: 100%;
+}
