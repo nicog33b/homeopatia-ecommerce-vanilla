@@ -1,10 +1,12 @@
 
+//estado de conexión
 var userIsConnected = 1;
+
 var nombreCompleto="";
 var email="";
 var documento="";
 var telefono="";
-var ciudad="";
+var departamento="";
 var dirección="";
 var password="";
 var newpassword="";
@@ -12,6 +14,53 @@ var newpassword2="";
 
 
 
+
+const modalRegister = `
+<div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="registroModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLabel">¡A un paso de tener tu usuario!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <main class="form-register">
+        <form>
+        <div class="form-outline mb-4">
+        <input type="email" id="form3Example1cg" class="form-control form-control-lg" />
+        <label class="form-label" for="form3Example1cg">Email</label>
+        </div>
+        
+        <div class="form-outline mb-4">
+        <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
+        <label class="form-label" for="form3Example3cg">Nombre completo</label>
+        </div>
+        
+        <div class="form-outline mb-4">
+        <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
+        <label class="form-label" for="form3Example4cg">Contraseña</label>
+        </div>
+        
+        <div class="form-outline mb-4">
+        <input type="password" id="form3Example4cdg" class="form-control form-control-lg" />
+        <label class="form-label" for="form3Example4cdg">Repite contraseña</label>
+        </div>
+        <div class="d-flex justify-content-center">
+        <button type="button"
+        class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Registrar</button>
+        </div>
+        
+        <p class="text-center text-muted mt-5 mb-0"> <a id="backToSignButton" href="#!" class="fw-bold text-body">¿Ya tienes cuenta?</a></p>
+        
+        </form>
+        
+        </main>
+        
+      </div>
+     </div>
+  </div>
+</div>  
+`;
 
 
 const modalSignIn = `
@@ -39,9 +88,9 @@ const modalSignIn = `
               <label for="floatingPassword">Contraseña</label>
             </div>
         
-            <div class="mb-3">
+            <div id="buttonRegister" class="mb-3">
               <label>
-                <a  data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal" aria-label="Close" href="#" value="registrarse" > ¿No tienes cuenta? registrate.</a>
+             <a href="#" value="registrarse" > ¿No tienes cuenta? registrate.</a>
               </label>
             </div>
             <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
@@ -181,7 +230,7 @@ const modalChangePassword= `
   </button>
 </div>
 
-  <button type="submit" class="btn-sm btn-primary text-center">Guardar contraseña</button>
+  <button id="savePassBtn" type="button" class="btn-sm btn-primary text-center">Guardar contraseña</button>
 
   <button type="submit" class="btn-sm btn-danger  text-center">Salir</button>
 
@@ -201,29 +250,52 @@ const modalChangePassword= `
 `;
 
 
-//si no hay usuario logueado le abre el modal con posibilidades de logear o registrarse.
-if(userIsConnected===0){
 
 document.getElementById('userButton').addEventListener('click', function() {
+  if (userIsConnected === 0) {
+    // Si el usuario no está conectado, se muestra el modal de inicio de sesión.
     document.body.insertAdjacentHTML('beforeend', modalSignIn);
+    document.body.insertAdjacentHTML('beforeend', modalRegister);
+    //se muestra el login
     $('#signInModal').modal('show'); 
-  });
-}else{
-  //en cambio si hay un usuario logeado le habilita el modal donde puede ver los datos de usuario y modificarlos.
-    document.getElementById('userButton').addEventListener('click', function() {
 
-        document.body.insertAdjacentHTML('beforeend', modalUser);
-        $('#userModal').modal('show');
-
-        //se cierre el modal donde aparecen los datos y se abre el de cambiar contraseña.
-        document.getElementById('changePassBtn').addEventListener('click', function() {
-            $('#userModal').modal('hide');
-            document.body.insertAdjacentHTML('beforeend', modalChangePassword);
-            $('#changePassword').modal('show'); 
-          });
-         
+    //abre el registro si el usuario no tiene cuenta.
+      document.getElementById('buttonRegister').addEventListener('click', function() {
+        //cierra el modal de sign in
+        $('#signInModal').modal('hide');
+        //muestra el modal register
+        $('#registroModal').modal('show'); 
+        //habilita el boton volver atras.
+        document.getElementById('backToSignButton').addEventListener('click', function() {
+          //cierra modal registro
+          $('#registroModal').modal('hide');
+          //accion
+          //abre modal sign in 
+          $('#signInModal').modal('show'); 
+        });
       });
 
-}
+  } else {
+    // Si el usuario está conectado, se muestra el modal de usuario y se agrega un listener para el botón de cambio de contraseña.
+    document.body.insertAdjacentHTML('beforeend', modalUser);
+    document.body.insertAdjacentHTML('beforeend', modalChangePassword);
+    $('#userModal').modal('show'); 
+    document.getElementById('changePassBtn').addEventListener('click', function() {
+      // Cuando se presiona el botón de cambio de contraseña, se cierra el modal de usuario y se muestra el modal de cambio de contraseña.
+      $('#userModal').modal('hide');
+
+      $('#changePassword').modal('show'); 
+      //cuando se presiona el boton de guardar contraseña
+      document.getElementById('savePassBtn').addEventListener('click', function() {
+        // Cuando se presiona el botón de cambio de contraseña, se cierra el modal de usuario y se muestra el modal de cambio de contraseña.
+        $('#changePassword').modal('hide');
+       //update de password
+        $('#userModal').modal('show'); 
+      });
+    });
+  }
+});
+
+
 
 
