@@ -25,28 +25,36 @@ const modalRegister = `
       </div>
       <div class="modal-body">
         <main class="form-register">
+
         <form>
+        <label class="form-label" for="register_user_email">Email</label>
         <div class="form-outline mb-4">
-        <input type="email" id="form3Example1cg" class="form-control form-control-lg" />
-        <label class="form-label" for="form3Example1cg">Email</label>
+        <input type="email" id="register_user_email" class="form-control form-control-lg" />
+        <div class="valid-feedback">
+        Esta bien!
+</div>
+       <div class="invalid-feedback">
+        esta mal!
         </div>
         
         <div class="form-outline mb-4">
-        <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
-        <label class="form-label" for="form3Example3cg">Nombre completo</label>
+        <label class="form-label" for="register_user_nombre_completo">Nombre completo</label>
+        <input type="email" id="register_user_nombre_completo" class="form-control form-control-lg" />
         </div>
         
         <div class="form-outline mb-4">
-        <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
-        <label class="form-label" for="form3Example4cg">Contraseña</label>
+        <label class="form-label" for="register_user_password">Contraseña</label>
+        <input type="password" id="register_user_password" class="form-control form-control-lg" />
+
         </div>
         
         <div class="form-outline mb-4">
-        <input type="password" id="form3Example4cdg" class="form-control form-control-lg" />
-        <label class="form-label" for="form3Example4cdg">Repite contraseña</label>
+        <label class="form-label" for="register_user_password_confirm">Repite contraseña</label>
+        <input type="password" id="register_user_password_confirm" class="form-control form-control-lg" />
+       
         </div>
         <div class="d-flex justify-content-center">
-        <button type="button"
+        <button type="Submit"
         class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Registrar</button>
         </div>
         
@@ -64,6 +72,8 @@ const modalRegister = `
 
 
 const modalSignIn = `
+
+
 <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -72,6 +82,10 @@ const modalSignIn = `
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+
+
+
+      
         <main class="form-signin">
           <form>
             <div class="registerTitle text-center">
@@ -80,14 +94,11 @@ const modalSignIn = `
             <h1 class="h3 mb-3 fw-normal"></h1>
        ¡Entra a tu cuenta!
             <div class="form-floating">
-              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Email</label>
+              <input type="email" class="form-control" id="enter_user_email" placeholder="name@example.com">
             </div>
             <div class="form-floating">
-              <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-              <label for="floatingPassword">Contraseña</label>
+              <input type="password" class="form-control" id="enter_user_password" placeholder="Password">
             </div>
-        
             <div id="buttonRegister" class="mb-3">
               <label>
              <a href="#" value="registrarse" > ¿No tienes cuenta? registrate.</a>
@@ -116,40 +127,39 @@ const modalUser = `
 <!--Register body starts-->
 
 
-
 <form>
-<label for="nombre" class="form-label">Nombre completo</label>
+<label for="user_nombre" class="form-label">Nombre completo</label>
   <div class="mb-3 input-group">
-    <input value="Nicolás García" type="text" class="form-control" id="nombre" name="nombre" placeholder="Escribe aquí tu nombre" disabled>
+    <input value="Nicolás García" type="text" class="form-control" id="user_nombre" name="nombre" placeholder="Escribe aquí tu nombre" disabled>
     <button class="btn btn-outline-secondary" type="button">
       <i class="fas fa-pencil-alt"></i>
     </button>
   </div>
-  <label for="email" class="form-label">Correo electronico</label>
+  <label for="user_email" class="form-label">Correo electronico</label>
   <div class="mb-3 input-group">
-    <input value="nicolasg99dr@gmail.com" type="email" class="form-control" id="email" name="email" placeholder="Escribe aquí tu correo electrónico" disabled>
+    <input value="nicolasg99dr@gmail.com" type="email" class="form-control" id="user_email" name="email" placeholder="Escribe aquí tu correo electrónico" disabled>
     <button class="btn btn-outline-secondary" type="button">
       <i class="fas fa-pencil-alt"></i>
     </button>
   </div>
-  <label for="documento" class="form-label">Documento</label>
+  <label for="user_documento" class="form-label">Documento</label>
   <div class="mb-3 input-group">
-    <input value="50113552" type="text" class="form-control" id="documento" name="documento" placeholder="Escribe aquí tu documento" disabled>
+    <input value="50113552" type="text" class="form-control" id="user_documento" name="documento" placeholder="Escribe aquí tu documento" disabled>
     <button class="btn btn-outline-secondary" type="button">
       <i class="fas fa-pencil-alt"></i>
     </button>
   </div>
-  <label for="telefono" class="form-label">Telefono</label>
+  <label for="user_telefono" class="form-label">Telefono</label>
   <div class="mb-3 input-group">
-    <input value="094272390" type="text" class="form-control" id="telefono" name="telefono" placeholder="Escribe aquí tu telefono" disabled>
+    <input value="094272390" type="text" class="form-control" id="user_telefono" name="telefono" placeholder="Escribe aquí tu telefono" disabled>
     <button class="btn btn-outline-secondary" type="button">
       <i class="fas fa-pencil-alt"></i>
     </button>
   </div>
   <div class="mb-3">
-    <label for="ciudad" class="form-label">Ciudad</label>
-    <select class="form-select" id="ciudad" name="ciudad">
-      <option value="" selected disabled>Selecciona tu ciudad</option>
+    <label for="user_departamento" class="form-label">Departamento</label>
+    <select class="form-select" id="user_departamento" name="ciudad">
+      <option value="" selected disabled>Selecciona tu departamento</option>
       <option value="Montevideo">Montevideo</option>
       <option value="Canelones">Canelones</option>
       <option value="Maldonado">Maldonado</option>
@@ -167,9 +177,9 @@ const modalUser = `
       <option value="Salto">Salto</option>
     </select>
   </div>
-  <label for="dirección" class="form-label">Dirección</label>
+  <label for="user_direccion" class="form-label">Dirección</label>
   <div class="mb-3 input-group">
-    <input value="Independencia 919" type="text" class="form-control" id="direction" name="dirección" placeholder="Escribe aquí tu correo electrónico" disabled>
+    <input value="Independencia 919" type="text" class="form-control" id="user_direccion" name="dirección" placeholder="Escribe aquí tu correo electrónico" disabled>
     <button class="btn btn-outline-secondary" type="button">
       <i class="fas fa-pencil-alt"></i>
     </button>
@@ -177,7 +187,7 @@ const modalUser = `
 
   <button id="changePassBtn" type="button" class="btn-sm btn-primary text-center">Cambiar contraseña</button>
   <button  type="button" class="btn-sm btn-secondary text-center" ><a class="unstyled" href="../html/historial.html">Ver historial</a></button>
-  <button type="submit" class="btn-sm btn-danger  text-center">Salir</button>
+  <button type="submit" class="btn-sm btn-danger  text-center">Guardar</button>
 
 </form>
 
@@ -205,35 +215,33 @@ const modalChangePassword= `
   <div class="modal-body">
 <!--Register body starts-->
 
-
-
 <form>
 <label for="passOld" class="form-label">Contraseña antigua</label>
   <div class="mb-3 input-group">
-    <input value="holasi" type="password" class="form-control" id="passOld" name="old password" placeholder="Escribe aquí tu antigua contraseña">
+    <input id="passOld" value="" type="password" class="form-control"  name="old password" placeholder="Escribe aquí tu antigua contraseña">
     <button class="btn btn-outline-secondary" type="button">
       <i class="fas fa-pencil-alt"></i>
     </button>
   </div>
   <label for="newPass1" class="form-label">Contraseña nueva</label>
   <div class="mb-3 input-group">
-    <input value="holasi" type="password" class="form-control" id="newPass1" name="new password" placeholder="Escribe aquí tu nueva contraseña">
+    <input  type="password" class="form-control" id="newPass1" name="new password" placeholder="Escribe aquí tu nueva contraseña">
     <button class="btn btn-outline-secondary" type="button">
       <i class="fas fa-pencil-alt"></i>
     </button>
   </div>
   <label for="newPass2" class="form-label">Repite la nueva</label>
   <div class="mb-3 input-group">
-  <input value="holasi" type="password" class="form-control" id="newPass2" name="new password" placeholder="Repite aquí tu nueva contraseña">
+  <input  type="password" class="form-control" id="newPass2" name="new password" placeholder="Repite aquí tu nueva contraseña">
   <button class="btn btn-outline-secondary" type="button">
     <i class="fas fa-pencil-alt"></i>
   </button>
 </div>
 
-  <button id="savePassBtn" type="button" class="btn-sm btn-primary text-center">Guardar contraseña</button>
+  <button id="savePassBtn" type="Submit" class="btn-sm btn-primary text-center">Guardar contraseña</button>
 
-  <button type="submit" class="btn-sm btn-danger  text-center">Salir</button>
-
+  
+  <p class="text-center text-muted mt-5 mb-0"> <a id="backToUserModal" href="#!" class="fw-bold text-body">No quiero cambiar mi contraseña</a></p>
 </form>
 
 <!--Register body ends-->
@@ -249,52 +257,118 @@ const modalChangePassword= `
 
 `;
 
+//Abrir modals y dependencias
+ const openSignIn = ()=>{
+  document.body.insertAdjacentHTML('beforeend', modalSignIn);
+  document.body.insertAdjacentHTML('beforeend', modalRegister);
+  $('#signInModal').modal('show'); 
+ }
+
+const openModalUser=() =>{
+  document.body.insertAdjacentHTML('beforeend', modalUser);
+  document.body.insertAdjacentHTML('beforeend', modalChangePassword);
+  $('#userModal').modal('show'); 
+ 
+}
+
+//cleaners de input en cada modal
+
+inputChangePasswordClean = () =>{
+  $('#passOld').val('')
+  $('#newPass1').val('')
+  $('#newPass2').val('')
+}
+
+inputUserClean = () =>{
+  $('#user_nombre').val('')
+  $('#user_email').val('')
+  $('#user_documento').val('')
+  $('#user_telefono').val('')
+  $('#user_departamento').val('')
+  $('#user_direccion').val('')
+}
+
+inputSignInClean = () =>{
+  $('#enter_user_email').val('')
+  $('#enter_user_password').val('')
+}
+
+inputRegisterClean = () =>{
+  $('#register_user_email').val('')
+  $('#register_user_password').val('')
+  $('#register_user_password_confirm').val('')
+  $('#register_user_nombre_completo').val('')
+}
 
 
+
+
+
+
+
+
+ //lista de modals.
+ const modals = [  {    id: "#signInModal",  },  {    id: "#registroModal",  },  {    id: "#userModal",  },  {    id: "#changePassword",  }]
+
+ //esta f-arrow permite reducir la sobrecarga de reptición de codigo a la hora de abrir o cerrar los modals.
+ const hideOrShow = (modalShow, modalHide) => {
+   $(modalHide).modal('hide');
+   $(modalShow).modal('show');
+ }
+
+ /*
+ 0-sign in
+ 1-register
+ 2-user
+ 3-change password
+
+ */
 document.getElementById('userButton').addEventListener('click', function() {
   if (userIsConnected === 0) {
-    // Si el usuario no está conectado, se muestra el modal de inicio de sesión.
-    document.body.insertAdjacentHTML('beforeend', modalSignIn);
-    document.body.insertAdjacentHTML('beforeend', modalRegister);
-    //se muestra el login
-    $('#signInModal').modal('show'); 
-
-    //abre el registro si el usuario no tiene cuenta.
-      document.getElementById('buttonRegister').addEventListener('click', function() {
-        //cierra el modal de sign in
-        $('#signInModal').modal('hide');
-        //muestra el modal register
-        $('#registroModal').modal('show'); 
-        //habilita el boton volver atras.
-        document.getElementById('backToSignButton').addEventListener('click', function() {
-          //cierra modal registro
-          $('#registroModal').modal('hide');
-          //accion
-          //abre modal sign in 
-          $('#signInModal').modal('show'); 
-        });
+    //abre menu de inicio de sesión y pre-registro.
+    openSignIn();
+    document.getElementById('buttonRegister').addEventListener('click', function() {
+      //cambio de modal sign in -> register
+     hideOrShow(modals[1].id,modals[0].id)
+      document.getElementById('backToSignButton').addEventListener('click', function() {
+      //cambio de modal register -> sign in 
+      inputRegisterClean();
+        hideOrShow(modals[0].id,modals[1].id)
       });
-
+    });
   } else {
-    // Si el usuario está conectado, se muestra el modal de usuario y se agrega un listener para el botón de cambio de contraseña.
-    document.body.insertAdjacentHTML('beforeend', modalUser);
-    document.body.insertAdjacentHTML('beforeend', modalChangePassword);
-    $('#userModal').modal('show'); 
+   openModalUser();
+   //botton de acceso al modal de cambio de contraseña
     document.getElementById('changePassBtn').addEventListener('click', function() {
-      // Cuando se presiona el botón de cambio de contraseña, se cierra el modal de usuario y se muestra el modal de cambio de contraseña.
-      $('#userModal').modal('hide');
+    //user date -> change password
+    hideOrShow(modals[3].id,modals[2].id);
+    //boton para volver del modal de cambio de contraseña al que contiene los datos de usuario
+    document.getElementById('backToUserModal').addEventListener('click', function() {
+      inputChangePasswordClean();
+      hideOrShow(modals[2].id,modals[3].id);
 
-      $('#changePassword').modal('show'); 
-      //cuando se presiona el boton de guardar contraseña
-      document.getElementById('savePassBtn').addEventListener('click', function() {
-        // Cuando se presiona el botón de cambio de contraseña, se cierra el modal de usuario y se muestra el modal de cambio de contraseña.
-        $('#changePassword').modal('hide');
-       //update de password
-        $('#userModal').modal('show'); 
+        });
+      document.getElementById('savePassBtn').addEventListener('Submit', function() {
+       //codigo post password.
       });
     });
   }
 });
+
+//limpiar todos los input si el modal se cierra
+    $(document).on('hidden.bs.modal', function (e) {
+      inputChangePasswordClean();
+      inputRegisterClean();
+      inputSignInClean();
+      inputUserClean();
+      })
+
+
+
+
+
+
+
 
 
 
