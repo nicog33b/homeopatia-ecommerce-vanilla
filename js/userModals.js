@@ -1,6 +1,6 @@
 
 //estado de conexión
-var userIsConnected = 1;
+var userIsConnected = 0;
 
 var nombreCompleto="";
 var email="";
@@ -31,10 +31,10 @@ const modalRegister = `
         <div class="form-outline mb-4">
         <input type="email" id="register_user_email" class="form-control form-control-lg" />
         <div class="valid-feedback">
-        Esta bien!
+
 </div>
        <div class="invalid-feedback">
-        esta mal!
+incorrecto
         </div>
         
         <div class="form-outline mb-4">
