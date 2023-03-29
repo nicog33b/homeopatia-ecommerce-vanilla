@@ -31,26 +31,30 @@ const modalRegister = `
         <div class="form-outline mb-4">
         <input type="email" id="register_user_email" class="form-control form-control-lg" />
         <div class="valid-feedback">
-
-</div>
+        </div>
        <div class="invalid-feedback">
-incorrecto
         </div>
         
         <div class="form-outline mb-4">
         <label class="form-label" for="register_user_nombre_completo">Nombre completo</label>
-        <input type="email" id="register_user_nombre_completo" class="form-control form-control-lg" />
+        <input type="email" id="register_user_nombre_completo" class="form-control form-control-lg"/>
         </div>
-        
+
+
+        <div class="form-outline mb-4">
+        <label for="register_fecha_nacimiento">Fecha de nacimiento:</label>
+        <input class="form-control form-control-lg" type="date" id="register_fecha_nacimiento" name="register_fecha_nacimiento">
+        </div>
+
+
         <div class="form-outline mb-4">
         <label class="form-label" for="register_user_password">Contraseña</label>
-        <input type="password" id="register_user_password" class="form-control form-control-lg" />
-
+        <input name="register_user_password" type="password" id="register_user_password" class="form-control form-control-lg" />
         </div>
         
         <div class="form-outline mb-4">
         <label class="form-label" for="register_user_password_confirm">Repite contraseña</label>
-        <input type="password" id="register_user_password_confirm" class="form-control form-control-lg" />
+        <input type="password" name="register_user_password_confirm" id="register_user_password_confirm" class="form-control form-control-lg" />
        
         </div>
         <div class="d-flex justify-content-center">
@@ -362,13 +366,6 @@ document.getElementById('userButton').addEventListener('click', function() {
       inputSignInClean();
       inputUserClean();
       })
-
-
-
-
-
-
-
 
 
 
