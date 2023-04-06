@@ -1,12 +1,15 @@
 /* google fonts link */
 
-@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+
+
 
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background: hsl(0, 0, 94%);
 }
 
 section.Hservices .theme-text {
@@ -41,7 +44,6 @@ section.Hservices .card:hover::before {
   color: white;
 }
 section.Hservices .container-fluid {
-  background-image: url("blob-scene-haikei.svg");
   background-position: center;
   background-size: cover;
 }
@@ -51,3 +53,8 @@ section.Hservices .container-fluid {
   font-family:'Poppins', sans-serif;;
 }
 
+
+img {
+  height: 250px;
+  width: 160px;
+}

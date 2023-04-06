@@ -48,9 +48,6 @@ font-weight: 600;
 margin: 0 10px;
 }
 
-.searchForm {
-    width: 100%;
-}
 
 .rightSide {
     margin-left: 3rem;
@@ -67,6 +64,7 @@ margin: 0 10px;
 color: #fff;
 font-family: 'Lobster', cursive !important;
 font-size: 2.5rem;
+text-shadow: 0px 0px 0.1px #fff, 0px 0px 0.2px #fff, 0px 0px 0.1px darkseagreen, 0.1px 0px 0.4px darkseagreen, 1px 0.1px 0.4px darkseagreen, 0px 0px 0.4px darkseagreen, 0px 0px 0.5px darkseagreen;
 }
 
 .headerNav{
@@ -133,7 +131,7 @@ font-size: 2.5rem;
   }
 
   div.container .nav-link:hover{
-    color: #f9fd16;
+    color: #b9f825;
   }
 
 
@@ -182,4 +180,42 @@ font-size: 2.5rem;
     border: none;
   }
 
+  .headerNav .flex-row {
+    display: flex;
+    align-items: center;
+  }
+  
+  .rightSide {
+    margin-left: auto;
+  }
 
+  .brandStyle{
+  color:darkseagreen;
+  font-family: 'Lobster', cursive !important;
+font-size: 2.5rem;
+  text-shadow: 0px 0px 0.6px #fff, 0px 0px 0.6px #fff, 0px 0px 0.1px #fff, 1px 0px 0.6px #fff, 1px 0.1px 0.6px #fff, 1px 0px 0.4px #fff, 1px 0px 0.6px #fff;
+  }
+
+
+  #errorMessages {
+    border: 1px solid black;
+    color: red;
+    font-size: 0.9em;
+    margin-top: 0.5em;
+  }
+  
+  .userModalOptions button{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+  }
+  .userModalOptions #changePassBtn{
+    background-color: rgb(222, 153, 127);
+  }
+
+  .userModalOptions #userLogoutBtn{
+    background-color: rgb(162, 72, 60);
+  }
+
+  .userModalOptions #buyHistoryBtn{
+    background-color: rgb(78, 152, 183);
+  }

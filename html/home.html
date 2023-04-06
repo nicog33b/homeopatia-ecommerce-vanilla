@@ -71,33 +71,22 @@
 
     </div>
 
-   
       <div class="ms-auto">
-   
         <div class="userUtilities">
-
-         <button id="userButton" type="" href="" class="btn-sm btn-success cart-icon">
+       <button id="userButton" type="" href="" class="btn-sm btn-success cart-icon">
         <i class="fa fa-user minMarginRight"></i>
-         </button>
-
-         
+         </button>      
          <button href="" class="btn-sm btn-success cart-icon">
           <a href="../html/cart.html"><i class="fa fa-shopping-cart"></i></a> 
           <span class="badge bg-danger">3</span>
         </button>
-
-               </div>
-        
+               </div>   
       </div>
-
-  </div>
-
-     
-           
+    </div>      
            </nav>
       <nav class="navbar navbar-expand-lg headerNav">
         <div class="container">
-          <a class="navbar-brand" href="home.html">Larrosa</a>
+          <a class="navbar-brand" href="home.html">Homeopatia<span class="brandStyle">Larrosa</span></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -110,7 +99,7 @@
           <i class="fa-solid fa-grip-lines"></i>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul id="sectionPage" class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul id="sectionPage" class="navbar-nav me-auto mb-2 mb-lg-0 flex-row">
               <li class="nav-item">
                 <a class="nav-link" href="../html/productos.html">Productos</a>
               </li>
@@ -134,7 +123,7 @@
                 </button>
               </form>
             </div>
-          </div>
+          </div>          
         </div>
       </nav>
     </header>
@@ -309,7 +298,6 @@
   
 
 
-
   <!-- Footer -->
   <footer class="text-center text-lg-start bg-white text-muted">
     <!-- Section: Social media -->
@@ -399,39 +387,28 @@ Homeopatia.larrosa@gmail.com
 
 <!--validate.js-->
 <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+<!--Jquery-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Bootstrap/Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"crossorigin="anonymous"></script>
+<!--Owl carrousel-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="crossorigin="anonymous"></script>
+      <!--SCRIPT:LOG/REG/MOD/-->
+<script src="../js/modals/clearInputModals.js"></script>
+<script src="../js/modals/modalUser.js"></script>
+<script src="../js/modals/modalSignIn.js"></script>
+<script src="../js/modals/modalRegister.js"></script>
+<script src="../js/modals/modalChangePassword.js"></script>
+<script src="../js/user/loginValidation.js"></script>
+<script src="../js/user/registerPost.js"></script>
+<script src="../js/user/ButtonsAction.js"> </script>
+<script src="../js/user/userModals.js"> </script>
+<script src="../js/user/changePasswordPost.js"> </script>
+<script src="../js/user/userLogout.js"></script>
+
+<!--  home.html scripts -->
+<script src="../js/owlCarrouselHome.js"></script>
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-  <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-      crossorigin="anonymous"></script>
-      
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-      crossorigin="anonymous"></script>
-
-
-      <script src="../js/userModals.js"> </script>
-
-  <script>
-      $('.owl-carousel').owlCarousel({
-          loop: true,
-          margin: 15,
-          nav: true,
-          responsive: {
-              0: {
-                  items: 1
-              },
-              600: {
-                  items: 3
-              },
-              1000: {
-                  items: 5
-              }
-          }
-      })
-  </script>
 </body>
 </html>
