@@ -58,11 +58,13 @@ document.getElementById('userButton').addEventListener('click', function() {
      registerPost(); //function from ../user/registerPost
      hideOrShow(modals[1].id,modals[0].id)
 
+
       document.getElementById('backToSignButton').addEventListener('click', function() {
       //cambio de modal register -> sign in 
 
       inputRegisterClean();
         hideOrShow(modals[0].id,modals[1].id)
+    
       });
       
     });

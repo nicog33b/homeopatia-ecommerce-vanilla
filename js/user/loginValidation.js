@@ -29,31 +29,33 @@ const loginValidate = () => {
   
 
     
-    // Si no hay errores, enviar solicitud al servidor para validar el inicio de sesión
-    fetch("http://localhost:3999/api/users", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((login) => {
-        const loginSearch = login.find((u) => u.register_user_email === email.value && u.register_user_password === password.value);
-        if (loginSearch) {
-        
-          localStorage.setItem("email", email.value);
-          localStorage.setItem("pass", password.value);
-          localStorage.setItem("status", 1);
-          inputSignInClean();
-          window.location.href = "home.html";
-        } else {
-        feedback_email.textContent="";
-        feedback_password.textContent="Email o contraseña incorrecta.";
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+// Si no hay errores, enviar solicitud al servidor para validar el inicio de sesión
+fetch("http://localhost:3999/api/users", {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json",
+  },
+})
+  .then((response) => response.json())
+  .then((login) => {
+    const loginSearch = login.find((u) => u.register_user_email === email.value && u.register_user_password === password.value);
+    if (loginSearch !== undefined && loginSearch !== null) {
+      // Se encontró un usuario con el email y contraseña proporcionados
+      localStorage.setItem("email", email.value);
+      localStorage.setItem("pass", password.value);
+      localStorage.setItem("status", 1);
+      inputSignInClean();
+      // Verificar si el usuario todavía está en la página antes de redirigirlo
+     location.reload();
+    } else {
+      // No se encontró un usuario con el email y contraseña proporcionados
+      feedback_email.textContent="";
+      feedback_password.textContent="Email o contraseña incorrecta.";
+    }
+  })
+  .catch((error) => {
+    console.error(error);
+  });
     }
   });
   }
