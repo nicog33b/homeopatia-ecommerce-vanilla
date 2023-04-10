@@ -13,7 +13,7 @@ const modalRegister = `
         <form id="formRegister">
         <label class="form-label" for="register_user_email">Email</label>
         <div class="form-outline mb-4">
-        <input  name="email" type="email" id="register_user_email" class="form-control form-control-lg" />
+        <input  name="email" type="email" onblur="validateEmail(this)" id="register_user_email" class="form-control form-control-lg" />
        <div id="feedback_registerEmail" class="invalid-feedback" data-feedback="register_user_email">
         </div>
         
@@ -26,7 +26,7 @@ const modalRegister = `
 
         <div class="form-outline mb-4">
         <label for="register_fecha_nacimiento">Fecha de nacimiento:</label>
-        <input name="fechaNacimiento"class="form-control form-control-lg" type="String" id="register_fecha_nacimiento" name="register_fecha_nacimiento">
+        <input name="fechaNacimiento"class="form-control form-control-lg" type="Date" id="register_fecha_nacimiento" name="register_fecha_nacimiento">
         <div id="feedback_registerNacimiento" class="invalid-feedback" data-feedback="register_fecha_nacimiento">
         </div>
         </div>

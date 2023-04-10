@@ -4,29 +4,37 @@
 //localStorage.setItem("status",0)
 
 
-//Abrir modals y dependencias
- const openSignIn = ()=>{
-  document.body.insertAdjacentHTML('beforeend', modalSignIn);
-  document.body.insertAdjacentHTML('beforeend', modalRegister);
+const openSignIn = ()=>{
+  // Verificar si el modal ya existe
+  if (!document.querySelector("#signInModal")) {
+    document.body.insertAdjacentHTML('beforeend', modalSignIn);
+    document.body.insertAdjacentHTML('beforeend', modalRegister);
+  }
   $('#signInModal').modal('show'); 
- }
+}
 
 const openModalUser=() =>{
-  document.body.insertAdjacentHTML('beforeend', modalUser);
-  document.body.insertAdjacentHTML('beforeend', modalChangePassword);
+  // Verificar si el modal ya existe
+  if (!document.querySelector("#userModal")) {
+    document.body.insertAdjacentHTML('beforeend', modalUser);
+    document.body.insertAdjacentHTML('beforeend', modalChangePassword);
+  }
   $('#userModal').modal('show'); 
- 
 }
+
+
+
 
 
  //lista de modals.
  const modals = [  {    id: "#signInModal",  },  {    id: "#registroModal",  },  {    id: "#userModal",  },  {    id: "#changePassword",  }]
 
- //esta f-arrow permite reducir la sobrecarga de reptición de codigo a la hora de abrir o cerrar los modals.
  const hideOrShow = (modalShow, modalHide) => {
-   $(modalHide).modal('hide');
-   $(modalShow).modal('show');
- }
+  $(modalHide).off('click');
+  $(modalHide).modal('hide');
+  $(modalShow).modal('show');
+}
+
 
  /*
  0-sign in
@@ -55,8 +63,11 @@ document.getElementById('userButton').addEventListener('click', function() {
 
     document.getElementById('buttonRegister').addEventListener('click', function() {
       //change modal sign in -> register 
-     registerPost(); //function from ../user/registerPost
+      inputSignInClean();
+      registerPost(); //function from ../user/registerPost
      hideOrShow(modals[1].id,modals[0].id)
+         
+   
 
 
       document.getElementById('backToSignButton').addEventListener('click', function() {
@@ -96,7 +107,8 @@ document.getElementById('userButton').addEventListener('click', function() {
       inputChangePasswordClean();
       inputRegisterClean();
       inputSignInClean();
-      inputUserClean();
+
+
       })
 
 

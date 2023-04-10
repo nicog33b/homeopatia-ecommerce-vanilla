@@ -10,7 +10,9 @@ const modalChangePassword = `
         <!--Register body starts-->
 
         <form id="changePasswordForm" class="needs-validation" novalidate>
-          <label for="passOld" class="form-label">Contraseña antigua</label>
+          <label for="passO
+          
+          ld" class="form-label">Contraseña antigua</label>
           <div class="form-outline mb-4">
             <input id="oldPass" value="" type="password" class="form-control" name="register_user_password" placeholder="Escribe aquí tu antigua contraseña">
             <div id="feedback_oldPass" class="invalid-feedback" data-feedback="oldPass"></div>

@@ -44,9 +44,10 @@ fetch("http://localhost:3999/api/users", {
       localStorage.setItem("email", email.value);
       localStorage.setItem("pass", password.value);
       localStorage.setItem("status", 1);
+      location.reload();
       inputSignInClean();
-      // Verificar si el usuario todavía está en la página antes de redirigirlo
-     location.reload();
+
+
     } else {
       // No se encontró un usuario con el email y contraseña proporcionados
       feedback_email.textContent="";
