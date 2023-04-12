@@ -33,10 +33,6 @@ return;
   }
 }
 
-const register_user_email = document.getElementById("register_user_email");
-register_user_email.addEventListener("blur", function() {
-  validateEmail(register_user_email);
-});
 
 
 function registerPost() {

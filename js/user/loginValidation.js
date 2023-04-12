@@ -1,4 +1,5 @@
 
+
 const loginValidate = () => {
   document.getElementById("signInForm").addEventListener("submit", function (event) {
     event.preventDefault();
@@ -44,10 +45,13 @@ fetch("http://localhost:3999/api/users", {
       localStorage.setItem("email", email.value);
       localStorage.setItem("pass", password.value);
       localStorage.setItem("status", 1);
-      location.reload();
+      localStorage.setItem("userDate", JSON.stringify(loginSearch));
       inputSignInClean();
+      location.reload();
 
-
+    
+   
+   users=login;
     } else {
       // No se encontró un usuario con el email y contraseña proporcionados
       feedback_email.textContent="";

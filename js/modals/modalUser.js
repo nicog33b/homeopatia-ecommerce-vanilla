@@ -13,28 +13,22 @@ const modalUser = `
 <form>
 <label for="user_nombre" class="form-label">Nombre completo</label>
   <div class="mb-3 input-group">
-    <input value="Nicolás García" type="text" class="form-control" id="user_nombre" name="nombre" placeholder="Escribe aquí tu nombre" disabled>
+    <input value="" type="text" class="form-control" id="user_nombre" name="nombre" placeholder="Escribe aquí tu nombre" disabled>
     <button class="btn btn-outline-secondary" type="button">
       <i class="fas fa-pencil-alt"></i>
     </button>
   </div>
   <label for="user_email" class="form-label">Correo electronico</label>
   <div class="mb-3 input-group">
-    <input value="nicolasg99dr@gmail.com" type="email" class="form-control" id="user_email" name="email" placeholder="Escribe aquí tu correo electrónico" disabled>
+    <input value="" type="email" class="form-control" id="user_email" name="email" placeholder="Escribe aquí tu correo electrónico" disabled>
     <button class="btn btn-outline-secondary" type="button">
       <i class="fas fa-pencil-alt"></i>
     </button>
   </div>
-  <label for="user_documento" class="form-label">Documento</label>
-  <div class="mb-3 input-group">
-    <input value="50113552" type="text" class="form-control" id="user_documento" name="documento" placeholder="Escribe aquí tu documento" disabled>
-    <button class="btn btn-outline-secondary" type="button">
-      <i class="fas fa-pencil-alt"></i>
-    </button>
-  </div>
+  
   <label for="user_telefono" class="form-label">Telefono</label>
   <div class="mb-3 input-group">
-    <input value="094272390" type="text" class="form-control" id="user_telefono" name="telefono" placeholder="Escribe aquí tu telefono" disabled>
+    <input value="" type="text" class="form-control" id="user_telefono" name="telefono" placeholder="Escribe aquí tu telefono" disabled>
     <button class="btn btn-outline-secondary" type="button">
       <i class="fas fa-pencil-alt"></i>
     </button>
@@ -62,15 +56,18 @@ const modalUser = `
   </div>
   <label for="user_direccion" class="form-label">Dirección</label>
   <div class="mb-3 input-group">
-    <input value="Independencia 919" type="text" class="form-control" id="user_direccion" name="dirección" placeholder="Escribe aquí tu correo electrónico" disabled>
+    <input value="" type="text" class="form-control" id="user_direccion" name="dirección" placeholder="Escribe aquí tu correo electrónico" disabled>
     <button class="btn btn-outline-secondary" type="button">
       <i class="fas fa-pencil-alt"></i>
     </button>
     </div>
+    <br
+    >
     <div class="mb-3 input-group userModalOptions">
 
-    <button id="changePassBtn" type="button" class="btn btn-primary w-100 mx-3 border text-center">Cambiar contraseña</button>
     <button id="buyHistoryBtn" type="button" class="btn btn-primary w-100 mx-3 border text-center" >Historia de compras</button>
+    <br>
+    <button id="changePassBtn" type="button" class="btn btn-primary w-100 mx-3 border text-center">Cambiar contraseña</button>
     <button id="userLogoutBtn" type="button" class="btn btn-primary w-100 mx-3 border text-center">Cerrar session</button>
 
     </div>

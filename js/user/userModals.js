@@ -1,6 +1,7 @@
 
 //estado de conexión
  var userIsConnected = 0;
+
 //localStorage.setItem("status",0)
 
 
@@ -41,7 +42,6 @@ const openModalUser=() =>{
  1-register
  2-user
  3-change password
-
  */
 
 
@@ -54,10 +54,12 @@ const openModalUser=() =>{
 
 
 document.getElementById('userButton').addEventListener('click', function() {
+  //verifica si el usuario esta conectado. 
   if (localStorage.getItem("status" )!=1) {
     //abre menu de inicio de sesión y pre-registro.
     
     openSignIn();
+    
     loginValidate(); //function from ../login/loginValidation   
 
 
@@ -82,22 +84,27 @@ document.getElementById('userButton').addEventListener('click', function() {
   } else {
    openModalUser();
    userLogoutBtn() //function from ../user/userLogout
+   const userDate = JSON.parse(localStorage.getItem("userDate"));
+document.getElementById("user_email").value= userDate.register_user_email;
+document.getElementById("user_nombre").value = userDate.register_user_nombre_completo;
+document.getElementById("user_fecha").value = userDate.register_fecha_nacimiento;
+document.getElementById("user_departamento").value = userDate.departamento;
+document.getElementById("user_telefono").value = userDate.telefono;
+document.getElementById("user_direccion").value = userDate.direccion;
+  
    
-   //botton de acceso al modal de cambio de contraseña
+   //acceso al modal de cambio de contraseña
     document.getElementById('changePassBtn').addEventListener('click', function() {
     //user date -> change password
     changePasswordPost();
     hideOrShow(modals[3].id,modals[2].id);
    
-    //boton para volver del modal de cambio de contraseña al que contiene los datos de usuario
+    //regresa al modal de datos de usuario
     document.getElementById('backToUserModal').addEventListener('click', function() {
       inputChangePasswordClean();
       hideOrShow(modals[2].id,modals[3].id);
 
         });
-      document.getElementById('savePassBtn').addEventListener('Submit', function() {
-       //codigo post password.
-      });
     });
   }
 });
@@ -107,9 +114,10 @@ document.getElementById('userButton').addEventListener('click', function() {
       inputChangePasswordClean();
       inputRegisterClean();
       inputSignInClean();
-
-
       })
 
 
 
+
+
+ 
