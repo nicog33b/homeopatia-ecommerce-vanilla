@@ -5,6 +5,32 @@
 //localStorage.setItem("status",0)
 
 
+const updateUserData = ( ) =>{
+  
+   // Si no hay errores, enviar solicitud al servidor para validar el inicio de sesión
+fetch(`http://localhost:3999/api/users/${JSON.parse(localStorage.getItem("userDate"))._id}`, {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json",
+  },
+})
+  .then((response) => response.json())
+  .then((searchData) => {
+    console.log(searchData)
+    document.getElementById("user_email").value = searchData.register_user_email;
+    document.getElementById("user_nombre").value = searchData.register_user_nombre_completo;
+    document.getElementById("user_telefono").value = searchData.telefono
+    document.getElementById("user_direccion").value = searchData.direccion
+
+//*
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+}
+
+
 const openSignIn = ()=>{
   // Verificar si el modal ya existe
   if (!document.querySelector("#signInModal")) {
@@ -20,7 +46,8 @@ const openModalUser=() =>{
     document.body.insertAdjacentHTML('beforeend', modalUser);
     document.body.insertAdjacentHTML('beforeend', modalChangePassword);
   }
-  $('#userModal').modal('show'); 
+  $('#userModal').modal('show');
+  updateUserData() ;
 }
 
 
@@ -82,17 +109,9 @@ document.getElementById('userButton').addEventListener('click', function() {
       
     });
   } else {
-   openModalUser();
+   openModalUser(); //from here
    userLogoutBtn() //function from ../user/userLogout
-   const userDate = JSON.parse(localStorage.getItem("userDate"));
-document.getElementById("user_email").value= userDate.register_user_email;
-document.getElementById("user_nombre").value = userDate.register_user_nombre_completo;
-document.getElementById("user_fecha").value = userDate.register_fecha_nacimiento;
-document.getElementById("user_departamento").value = userDate.departamento;
-document.getElementById("user_telefono").value = userDate.telefono;
-document.getElementById("user_direccion").value = userDate.direccion;
-  
-   
+
    //acceso al modal de cambio de contraseña
     document.getElementById('changePassBtn').addEventListener('click', function() {
     //user date -> change password
