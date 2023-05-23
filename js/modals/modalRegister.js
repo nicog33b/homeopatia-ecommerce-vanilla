@@ -31,6 +31,28 @@ const modalRegister = `
         </div>
         </div>
 
+        <div class="mb-3">
+        <label for="user_departamento" class="form-label">Departamento</label>
+        <select class="form-select" id="user_departamento" name="ciudad" onblur="validateDepartamento(this)">
+          <option value="" selected disabled>Selecciona tu departamento</option>
+          <option value="Montevideo">Montevideo</option>
+          <option value="Canelones">Canelones</option>
+          <option value="Maldonado">Maldonado</option>
+          <option value="Rocha">Rocha</option>
+          <option value="Colonia">Colonia</option>
+          <option value="San José">San José</option>
+          <option value="Paysandú">Paysandú</option>
+          <option value="Artigas">Artigas</option>
+          <option value="Durazno">Durazno</option>
+          <option value="Florida">Florida</option>
+          <option value="Lavalleja">Lavalleja</option>
+          <option value="Rivera">Rivera</option>
+          <option value="Tacuarembó">Tacuarembó</option>
+          <option value="Treinta y Tres">Treinta y Tres</option>
+          <option value="Salto">Salto</option>
+        </select>
+      </div>
+
 
         <div class="form-outline mb-4">
         <label class="form-label" for="register_user_password">Contraseña</label>

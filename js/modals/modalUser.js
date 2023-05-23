@@ -10,28 +10,24 @@ const modalUser = `
 <!--Register body starts-->
 
 
-<form>
+<form id="userDataForm">
 <label for="user_nombre" class="form-label">Nombre completo</label>
-  <div class="mb-3 input-group">
-    <input value="" type="text" class="form-control" id="user_nombre" name="nombre" placeholder="Escribe aquí tu nombre" disabled>
-    <button class="btn btn-outline-secondary" type="button">
-      <i class="fas fa-pencil-alt"></i>
-    </button>
+  <div class="input-group">
+    <input value="" type="text" class="form-control edit-input" id="user_nombre" name="register_user_nombre_completo" placeholder="Escribe aquí tu nombre" disabled>
   </div>
   <label for="user_email" class="form-label">Correo electronico</label>
   <div class="mb-3 input-group">
     <input value="" type="email" class="form-control" id="user_email" name="email" placeholder="Escribe aquí tu correo electrónico" disabled>
-    <button class="btn btn-outline-secondary" type="button">
-      <i class="fas fa-pencil-alt"></i>
-    </button>
+ 
+    <div id="feedback_user_nombre" class="invalid-feedback" data-feedback="user_email">
+    </div>
   </div>
   
   <label for="user_telefono" class="form-label">Telefono</label>
   <div class="mb-3 input-group">
-    <input value="" type="text" class="form-control" id="user_telefono" name="telefono" placeholder="Escribe aquí tu telefono" disabled>
-    <button class="btn btn-outline-secondary" type="button">
-      <i class="fas fa-pencil-alt"></i>
-    </button>
+    <input value="" type="text" class="form-control edit-input" id="user_telefono" name="telefono" placeholder="Escribe aquí tu telefono" disabled>
+    <div id="feedback_user_telefono" class="invalid-feedback" data-feedback="user_telefono">
+    </div>
   </div>
   <div class="mb-3">
     <label for="user_departamento" class="form-label">Departamento</label>
@@ -56,17 +52,15 @@ const modalUser = `
   </div>
   <label for="user_direccion" class="form-label">Dirección</label>
   <div class="mb-3 input-group">
-    <input value="" type="text" class="form-control" id="user_direccion" name="dirección" placeholder="Escribe aquí tu correo electrónico" disabled>
-    <button class="btn btn-outline-secondary" type="button">
-      <i class="fas fa-pencil-alt"></i>
-    </button>
+    <input value="" type="text" class="form-control edit-input" id="user_direccion" name="direccion" placeholder="Escribe aquí tu correo electrónico" disabled>
+
     </div>
-    <br
-    >
+    <br>
     <div class="mb-3 input-group userModalOptions">
 
-    <button id="buyHistoryBtn" type="button" class="btn btn-primary w-100 mx-3 border text-center" >Historia de compras</button>
+    <button id="changeDatesUser" type="button" class="btn btn-secondary w-100 mx-3 border text-center">Editar datos</button>
     <br>
+    <button id="buyHistoryBtn" type="button" class="btn btn-primary w-100 mx-3 border text-center" >Historia de compras</button>
     <button id="changePassBtn" type="button" class="btn btn-primary w-100 mx-3 border text-center">Cambiar contraseña</button>
     <button id="userLogoutBtn" type="button" class="btn btn-primary w-100 mx-3 border text-center">Cerrar session</button>
 

@@ -32,8 +32,7 @@ const modalChangePassword = `
           </div>
           <button id="savePassBtn" type="Submit" class="btn-sm btn-primary text-center">Guardar contraseña</button>
           
-          <p class="text-center text-muted mt-5 mb-0"> <a id="backToUserModal" href="#!" class="fw-bold text-body">Volver sin cambiar.</a></p>
-        </form>
+          
 
         <!--Register body ends-->
       </div>

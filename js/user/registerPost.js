@@ -1,3 +1,15 @@
+function validateDepartamento(input) {
+  const user_departamento = document.getElementById("user_departamento");
+  if (!user_departamento.value) {
+    input.classList.add("is-invalid");
+    document.getElementById("feedback_registerDepartamento").textContent = "Por favor, seleccione un departamento.";
+  } else {
+    input.classList.remove("is-invalid");
+    document.getElementById("feedback_registerDepartamento").textContent = "";
+  }
+}
+
+
 function validateEmail(input) {
   const register_user_email = document.getElementById("register_user_email");
   if (!input.value || !input.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
@@ -40,11 +52,12 @@ function registerPost() {
     event.preventDefault();
 
     // Obtener los elementos del formulario de registro
-    const register_user_email = document.getElementById("register_user_email");
+    register_user_email = document.getElementById("register_user_email");``
     const register_user_nombre_completo = document.getElementById("register_user_nombre_completo");
     const register_fecha_nacimiento = document.getElementById("register_fecha_nacimiento")
     const register_user_password = document.getElementById("register_user_password");
     const register_user_password_confirm = document.getElementById("register_user_password_confirm");
+    const departamento = document.getElementById("user_departamento");
 
 
 
@@ -120,6 +133,7 @@ const user = {
   register_fecha_nacimiento: document.getElementById("register_fecha_nacimiento").value,
   register_user_password: document.getElementById("register_user_password").value,
   register_user_password_confirm: document.getElementById("register_user_password_confirm").value,
+  departamento: document.getElementById("user_departamento").value
 };
 
 
@@ -135,8 +149,8 @@ fetch("http://localhost:3999/api/users", {
 .then(response => response.json())
 .then(data => {
   console.log(data);
-  location.reload()
-  inputRegisterClean()
+  inputCleanSignIn();
+  location.reload();
 })
 .catch(error => {
   console.error(error); 

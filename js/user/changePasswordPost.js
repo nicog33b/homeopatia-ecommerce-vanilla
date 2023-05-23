@@ -52,7 +52,9 @@ const changePasswordPost = () => {
         // Realizar una solicitud a la API para encontrar el usuario con ese email
         const response = await fetch(`http://localhost:3999/api/users`);
         const users = await response.json();
-        const user = users.find((user) => user.register_user_email === userEmail);
+        const user = users.find(
+          (user) => user.register_user_email === userEmail
+        );
 
         if (!user) {
           console.log("No se encontró el usuario con ese correo electrónico.");
@@ -67,13 +69,18 @@ const changePasswordPost = () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({ register_user_password: newPass1.value }),
-        })       
-                localStorage.setItem("pass", newPass1.value);
-                hideOrShow(modals[2].id, modals[3].id);
-                location.reload();
-                inputChangePasswordClean();
-          }
         });
-      } //end else
-    
+        localStorage.setItem("pass", newPass1.value);
+        $(modals[3].id).modal("hide");
+        inputChangePasswordClean();
+        // Reiniciar la página
+        location.reload();
 
+        // Borrar el localStorage
+        localStorage.clear();
+
+
+        
+      }
+    });
+}; //end else

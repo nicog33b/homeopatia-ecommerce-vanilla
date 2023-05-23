@@ -1,41 +1,80 @@
 
-const inputChangePasswordClean = () =>{
-    $('#oldPass').val('')
-    $('#newPass1').val('')
-    $('#newPass2').val('')
-    oldPass.classList.remove("is-invalid");
-    newPass1.classList.remove("is-invalid");
-    newPass2.classList.remove("is-invalid");
-  }
+const inputChangePasswordClean = () => {
+  // Obtener todos los inputs del modal
+  const inputs = document.querySelectorAll('#changePasswordForm input');
+
+  // Recorrer todos los inputs y limpiar su valor
+  inputs.forEach(input => {
+    input.value = '';
+    input.classList.remove('is-invalid', 'is-valid');
+  });
+
+  // Limpiar los mensajes de error
+  const feedbacks = document.querySelectorAll('[id^="feedback_"]');
+  feedbacks.forEach(feedback => feedback.textContent = '');
+
+  // Resetear el formulario y ocultar los mensajes de error
+  const form = document.getElementById('changePasswordForm');
+  form.reset();
+  form.classList.remove('was-validated');
+}
+
   
- const  inputUserClean = () =>{
-    $('#user_nombre').val('')
-    $('#user_email').val('')
-    $('#user_documento').val('')
-    $('#user_telefono').val('')
-    $('#user_departamento').val('')
-    $('#user_direccion').val('')
-  }
+
+  const inputCleanUser = () => {
+    //boton de editar usuario
+    const changeDateUserButton = document.getElementById("changeDatesUser");
+
+    //desabilita los input de info de usuario.
+    document.getElementById('user_nombre').disabled = true;
+    document.getElementById('user_email').disabled = true;
+    document.getElementById('user_telefono').disabled = true;
+    document.getElementById('user_direccion').disabled = true;
+
+//devuelve el texto original del boton de editar usuario
+    document.getElementById('changeDatesUser').textContent = 'Editar datos';
   
- const inputSignInClean = () =>{
-    $('#login_user_email').val('')
-    $('#login_user_password').val('')
-    login_user_email.classList.remove("is-invalid");
-    login_user_password.classList.remove("is-invalid");
 
 
-  }
+  };
   
-  const inputRegisterClean = () =>{
-    $('#register_user_email').val('')
-    $('#register_user_password').val('')
-    $('#register_user_password_confirm').val('')
-    $('#register_user_nombre_completo').val('')
-    //import user/registerPost
-    register_user_email.classList.remove("is-invalid");
-    register_user_nombre_completo.classList.remove("is-invalid");
-    register_fecha_nacimiento.classList.remove("is-invalid");
-    register_user_password.classList.remove("is-invalid");
-    register_user_password_confirm.classList.remove("is-invalid");
-  }
-
+  const inputCleanSignIn = () => {
+    // Obtener todos los inputs del modal
+    const inputs = document.querySelectorAll('#signInModal input');
+  
+    // Recorrer todos los inputs y limpiar su valor
+    inputs.forEach(input => {
+      input.value = '';
+      input.classList.remove('is-invalid', 'is-valid');
+    });
+  
+    // Limpiar los mensajes de error
+    const feedbacks = document.querySelectorAll('[id^="feedback_signin_"]');
+    feedbacks.forEach(feedback => feedback.textContent = '');
+  
+    // Resetear el formulario y ocultar los mensajes de error
+    const form = document.querySelector('#signInModal form');
+    form.reset();
+    form.classList.remove('was-validated');
+  };
+  
+  const inputCleanRegister = () => {
+    // Obtener todos los inputs del modal
+    const inputs = document.querySelectorAll('#registerModal input');
+  
+    // Recorrer todos los inputs y limpiar su valor
+    inputs.forEach(input => {
+      input.value = '';
+      input.classList.remove('is-invalid', 'is-valid');
+    });
+  
+    // Limpiar los mensajes de error
+    const feedbacks = document.querySelectorAll('[id^="feedback_register_"]');
+    feedbacks.forEach(feedback => feedback.textContent = '');
+  
+    // Resetear el formulario y ocultar los mensajes de error
+    const form = document.querySelector('#registerModal form');
+    form.reset();
+    form.classList.remove('was-validated');
+  };
+  

@@ -28,9 +28,9 @@ const modalSignIn = `
               <input type="password" class="form-control" id="login_user_password" placeholder="Password" required>
               <div id="feedback_password" class="invalid-feedback" data-feedback="login_user_password"></div>
             </div>
-            <div id="buttonRegister" class="mb-3">
+            <div class="mb-3">
               <label>
-             <a href="#" value="registrarse" > ¿No tienes cuenta? registrate.</a>
+             <a id="buttonRegister" href="#" value="registrarse" > ¿No tienes cuenta? registrate.</a>
               </label>
             </div>
             <button id="signInButtonConfirm" class="w-100 btn btn-lg btn-primary" type="Submit">Sign in</button>

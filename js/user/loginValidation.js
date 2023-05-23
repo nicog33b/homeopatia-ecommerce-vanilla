@@ -46,7 +46,7 @@ fetch("http://localhost:3999/api/users", {
       localStorage.setItem("pass", password.value);
       localStorage.setItem("status", 1);
       localStorage.setItem("userDate", JSON.stringify(loginSearch));
-      inputSignInClean();
+      inputCleanSignIn();
       location.reload();
 
     

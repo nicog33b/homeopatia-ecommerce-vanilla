@@ -6,8 +6,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
-   
-<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+      
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap"
@@ -31,37 +31,45 @@
     <link rel="stylesheet" type="text/css" href="../css/footer-header.css" />
 
     <title>Homeopatía Larrosa</title>
+
   </head>
   <body>
     <header>
-      <section class="headertop">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="top-left">
-                <a href=""><i class="fas fa-mobile-alt"></i> 094680535</a>
-              </div>
-            </div>
-            <div class="col-lg-6 topRight">
-              <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#signInModal">
-                <a>Login / Register</a>
-              </button>
-       
-              
-              <div class="socialIcon">
-                <a href=""><i class="fab fa-facebook-square"> </i></a>
-                <a href=""
-                  ><i class="fa fa-instagram" aria-hidden="true"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
+      
+
+
+      <nav class="navbar navbar-expand-sm navbar-light  navColor" >
+  <div class="container-fluid">
+    <div class="d-flex align-items-center social-icons">
+      <button type="button" class="btn-group-sm btn-success cart-icon">
+      <a href="https://www.facebook.com/homeopatia.Larrosa/" class="text-decoration-none me-1">    <i class="fab fa-facebook-f"></i></i></a>
+      </button>
+      <button type="button" class="btn-group-sm btn-success cart-icon">
+      <a href="https://wa.me/+59894680535?text=Hola,%20¿cómo%20estás?" class="text-decoration-none me-1">   <i id="whatsappIcon" class="fab fa-whatsapp"></i></a>
+    </button>
+    <button type="button" class="btn-group-sm btn-success cart-icon">
+      <a href="https://www.instagram.com/homeopatia.larrosa/" class="text-decoration-none">        <i class="fab fa-instagram"></i></a>
+    </button>
+
+    </div>
+
+      <div class="ms-auto">
+        <div class="userUtilities">
+       <button id="userButton" type="" href="" class="btn-sm btn-success cart-icon">
+        <i class="fa fa-user minMarginRight"></i>
+         </button>      
+         <button href="" class="btn-sm btn-success cart-icon">
+          <a href="../html/cart.html"><i class="fa fa-shopping-cart"></i></a> 
+          <span class="badge bg-danger">3</span>
+        </button>
+               </div>   
+      </div>
+    </div>      
+           </nav>
       <nav class="navbar navbar-expand-lg headerNav">
         <div class="container">
-          <a class="navbar-brand" href="home.html">Larrosa</a>
+          <a class="navbar-brand" href="home.html">Homeopatia<span class="brandStyle">Larrosa</span></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -71,41 +79,38 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+          <i class="fa-solid fa-grip-lines"></i>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul id="sectionPage" class="navbar-nav me-auto mb-2 mb-lg-0 flex-row">
               <li class="nav-item">
-                <a class="nav-link" href="#">Productos</a>
+                <a class="nav-link" href="../html/productos.html">Productos</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="../html/contacto.html">Contacto</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Nosotros</a>
+                <a class="nav-link" href="../html/nosotros.html">Nosotros</a>
               </li>
-            </ul>
-            <!--<form class="d-flex searchForm">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>-->
+            </ul>  
             <div class="rightSide">
-              <a href="cart.html"><i class="fa fa-shopping-cart"></i></a>
-              <a href=""><i class="fa fa-user"></i></a>
+              <form class="d-flex searchForm searchProduct">
+                <input
+                  class="form-control me-lg-1 "
+                  type="search"
+                  placeholder="¿Que buscas?"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </form>
             </div>
-          </div>
+          </div>          
         </div>
       </nav>
     </header>
 
-    
 
     <!--Banner section-->
 
@@ -411,144 +416,7 @@
 
     <!--ENTRAR-USER MODAL START -->
 
-    <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title text-center" id="exampleModalLabel">¡Bienvenido de vuelta!</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <main class="form-signin">
-              <form>
-                <div class="registerTitle text-center">
-                <a href="home.html">Homeopatía <br>Larrosa</a>
-              </div>
-                <h1 class="h3 mb-3 fw-normal"></h1>
-           ¡Entra a tu cuenta!
-                <div class="form-floating">
-                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                  <label for="floatingInput">Email</label>
-                </div>
-                <div class="form-floating">
-                  <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                  <label for="floatingPassword">Contraseña</label>
-                </div>
-            
-                <div class="mb-3">
-                  <label>
-                    <a  data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal" aria-label="Close" href="#" value="registrarse" > ¿No tienes cuenta? registrate.</a>
-                  </label>
-                </div>
-                <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-                <p class="mt-5 mb-3 text-muted">&copy; 2023</p>
-              </form>
-            </main>
-            
-          </div>
-         </div>
-      </div>
-    </div>
-
-
-
-
-<!--ENTRAR-END   /    REGISTER MODAL  START-->
     
-    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">¡Bienvenido!</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-<!--Register body starts-->
-
- 
-
-<form>
-
-  <div class="form-outline mb-4">
-    <input type="email" id="form3Example1cg" class="form-control form-control-lg" />
-    <label class="form-label" for="form3Example1cg">Email</label>
-  </div>
-
-  <div class="form-outline mb-4">
-    <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
-    <label class="form-label" for="form3Example3cg">Nombre</label>
-  </div>
-
-  <div class="form-outline mb-4">
-    <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
-    <label class="form-label" for="form3Example4cg">Contraseña</label>
-  </div>
-
-  <div class="form-outline mb-4">
-    <input type="password" id="form3Example4cdg" class="form-control form-control-lg" />
-    <label class="form-label" for="form3Example4cdg">Repite contraseña</label>
-  </div>
-  <div class="d-flex justify-content-center">
-    <button type="button"
-      class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Registrar</button>
-  </div>
-
-  <p class="text-center text-muted mt-5 mb-0"> <a data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal" data-bs-target="#signInModal" href="#!"
-      class="fw-bold text-body">¿Ya tienes cuenta?</a></p>
-
-</form>
-
-
-
-<div class="modal fade" id="UserModal" tabindex="-1" aria-labelledby="UserModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">¡Bienvenido!</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-<!--Register body starts-->
-
-
-
-<form>
-
-<div class="form-outline mb-4">
-<input type="email" id="form3Example1cg" class="form-control form-control-lg" />
-<label class="form-label" for="form3Example1cg">Email</label>
-</div>
-
-<div class="form-outline mb-4">
-<input type="email" id="form3Example3cg" class="form-control form-control-lg" />
-<label class="form-label" for="form3Example3cg">Nombre</label>
-</div>
-
-<div class="form-outline mb-4">
-<input type="password" id="form3Example4cg" class="form-control form-control-lg" />
-<label class="form-label" for="form3Example4cg">Contraseña</label>
-</div>
-
-<div class="form-outline mb-4">
-<input type="password" id="form3Example4cdg" class="form-control form-control-lg" />
-<label class="form-label" for="form3Example4cdg">Repite contraseña</label>
-</div>
-<div class="d-flex justify-content-center">
-<button type="button"
-  class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Registrar</button>
-</div>
-
-<p class="text-center text-muted mt-5 mb-0"> <a data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal" data-bs-target="#signInModal" href="#!"
-  class="fw-bold text-body">¿Ya tienes cuenta?</a></p>
-
-</form>
-
-<!--Register body ends-->
-          </div>
-         </div>
-      </div>
-    </div>
-
 
 
 
@@ -664,20 +532,24 @@ Homeopatia.larrosa@gmail.com
 
     
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-JEW9xMcG8R+pH31jwWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-      crossorigin="anonymous"
-    ></script>
+<!--Jquery-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Bootstrap/Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"crossorigin="anonymous"></script>
+
+          <!--SCRIPT:LOG/REG/MOD/-->
+<script src="../js/modals/clearInputModals.js"></script>
+<script src="../js/modals/modalUser.js"></script>
+<script src="../js/modals/modalSignIn.js"></script>
+<script src="../js/modals/modalRegister.js"></script>
+<script src="../js/modals/modalChangePassword.js"></script>
+<script src="../js/user/loginValidation.js"></script>
+<script src="../js/user/registerPost.js"></script>
+<script src="../js/user/changePasswordPost.js"> </script>
+<script src="../js/user/userModals.js"> </script>
+<script src="../js/user/userLogout.js"></script>
+<script src="../js/initialLoad.js"></script>
+
+
   </body>
 </html>
