@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&display=swap');
 
 
-h1,h2,h3,h4,h5,h6,a,p{
+#sobreNosotros h1,h2,h3,h4,h5,h6,a,p{
     font-family: 'Montserrat', sans-serif;
 
 }
 
-h1,h2,h3,h4{
+#sobreNosotros h1,h2,h3,h4{
     font-weight: 900;
 }
 
-h5,h6,a,p{
+#sobreNosotros h5,h6,a,p{
     font-weight: 300;
 }
 
