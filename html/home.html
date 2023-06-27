@@ -16,10 +16,7 @@
       rel="stylesheet"
     />
 
-    <script
-      src="https://kit.fontawesome.com/289fc15593.js"
-      crossorigin="anonymous"
-    ></script>
+   
     <link rel="stylesheet" type="text/css" href="../css/home.css" />
     <link rel="stylesheet" type="text/css" href="../css/footer-header.css" />
       <!-- Bootstrap CSS -->
@@ -38,100 +35,84 @@
   <body>
     <header>
 
-      
+      <nav id="userOptionsNav" class="navbar navbar justify-content-between">
+    
 
-
-      <nav class="navbar navbar-expand-sm navbar-light  navColor" >
-  <div class="container-fluid">
-    <div class="d-flex align-items-ce
-    ç
-    nter social-icons">
-      <button type="button" class="btn-group-sm btn-success cart-icon">
-      <a href="https://www.facebook.com/homeopatia.Larrosa/" class="text-decoration-none me-1">    <i class="fab fa-facebook-f"></i></i></a>
-      </button>
-      <button type="button" class="btn-group-sm btn-success cart-icon">
-      <a href="https://wa.me/+59894680535?text=Hola,%20¿cómo%20estás?" class="text-decoration-none me-1">   <i id="whatsappIcon" class="fab fa-whatsapp"></i></a>
-    </button>
-    <button type="button" class="btn-group-sm btn-success cart-icon">
-      <a href="https://www.instagram.com/homeopatia.larrosa/" class="text-decoration-none">        <i class="fab fa-instagram"></i></a>
-    </button>
-
-    </div>
-
-      <div class="ms-auto">
-        <div class="userUtilities">
-       <button id="userButton" type="" href="" class="btn-sm btn-success cart-icon">
-        <i class="fa fa-user minMarginRight"></i>
-         </button>      
-         <button href="" class="btn-sm btn-success cart-icon">
-          <a href="../html/cart.html"><i class="fa fa-shopping-cart"></i></a> 
-          <span class="badge bg-danger">3</span>
-        </button>
-               </div>   
-      </div>
-    </div>      
-           </nav>
+        <div class="ms-auto" style="margin-right: 1em;">
+          <!-- Contenido a colocar a la derecha del nav -->
+          <div class="socialSites">
+   
+            <ul>
+              <li> 
+                <i id="userButton" style="color:rgb(185, 235, 211)" class="fa fa-user"></i>
+            </li>
+              <li>
+                <div class="cart-icon">
+                <a href="../html/cart.html" style="color:rgb(232, 231, 231)"><i class="fa fa-shopping-cart" style="color:rgb(232, 223, 223)"></i></a> 
+                <span class="badge" style="color:red">0</span>
+              </div>
+          </li>
+              
+            </ul>
+          </div>
+        
+    
+      </nav>
       <nav class="navbar navbar-expand-lg headerNav">
-        <div class="container">
-          <a class="navbar-brand" href="home.html">Homeopatia<span class="brandStyle">Larrosa</span></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-          <i class="fa-solid fa-grip-lines"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul id="sectionPage" class="navbar-nav me-auto mb-2 mb-lg-0 flex-row">
-              <li class="nav-item">
-                <a class="nav-link" href="../html/productos.html">Productos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../html/contacto.html">Contacto</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../html/nosotros.html">Nosotros</a>
-              </li>
-            </ul>  
-            <div class="rightSide">
-              <form class="d-flex searchForm searchProduct">
-                <input
-                  class="form-control me-lg-1 "
-                  type="search"
-                  placeholder="¿Que buscas?"
-                  aria-label="Search"
-                />
-                <button class="btn btn-outline-success" type="submit">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-              </form>
-            </div>
-          </div>          
+    
+          
+          <div class="container">
+        <ul  class="nav nav-pills ms-auto">
+          <li class="nav-item">
+          <li class="nav-item">
+            <a class="nav-link" href="../html/contacto.html">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/nosotros.html">Nosotros</a>
+          </li>
+        </ul>  
+
+          <a id="navTitle" class="navbar-brand" href="home.html">Homeopatia<span class="brandStyle">Larrosa</span></a>
+    
+     
+            <div >
+              
+                <ul  class="nav nav-pills me-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../html/productos.html">Ofertas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../html/productos.html">Tienda</a>
+                  </li>
+
+                </ul>  
+              
+            
         </div>
+      </div>
+    </div>
+      </nav>
+
+      <nav id="navUserAndSocial" class="navbar navbar justify-content-between">
+        <div class="socialSites">
+   
+          <ul>
+            <li><a href="https://www.facebook.com/homeopatia.Larrosa/"><i class="fa-brands fa-facebook" ></i></a></li>
+            <li><a  href="https://wa.me/+59894680535?text=Hola,%20¿cómo%20estás?"><i class="fa-brands fa-whatsapp" ></i></a></li>
+            <li><a href="https://www.instagram.com/homeopatia.larrosa/"><i class="fa-brands fa-instagram" ></i></a></li>
+          </ul>
+        </div>
+
+    
       </nav>
     </header>
 
 
-
-<main>
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-      <div class="col-md-5 p-lg-5 mx-auto my-5">
-        <h1 class="display-4 fw-normal">Homeopatía Larrosa</h1>
-        <p class="lead fw-normal">El lugar que buscas para mejorar tu salud con productos totalmente naturales.</p>
-        <a class="btn btn-outline-success" href="#">Visita nuestros productos</a>
-      </div>
-      <div class="product-device shadow-sm d-none d-md-block"></div>
-      <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
-    </div>
-</main>
+  <div id="jumbotronHome" class="container-fluid">
+    <img src="../images/antiviral.jpg" alt="Imagen" class="img-extend">
+  </div>
 
 <div class="container-fluid my-5">
-  <h1 class="text-center fw-bold display-4 mb-5">Los más <span class="text-danger">Vendidos</span></h1>
-  <hr class="mx-auto mb-5 w-25">
   <div class="row">
       <div class="col-12 m-auto">
           <div class="owl-carousel owl-theme">
@@ -397,6 +378,8 @@ Homeopatia.larrosa@gmail.com
 
 <!--  home.html scripts -->
 <script src="../js/owlCarrouselHome.js"></script>
+<!--Font Awesome-->
+<script src="https://kit.fontawesome.com/289fc15593.js" crossorigin="anonymous"></script>
 
 
 </body>

@@ -1,178 +1,85 @@
 
-.headertop{
-    background-color: #212121;
-    padding: 5px 0;
-    font-size: 14px;
-}
 
-.top-left{
-    display: flex;
-    margin: 0px;
-    align-items: center;
-    height: 100%;
-}
 
-.top-left a{
-    color: #fff;
-    margin: 0 10px;
-}
 
-.headertop i{
-    color: #1addac;
-}
 
-.topRight{
-    display: flex;justify-content: flex-end;
-    align-items: center;
-}
+.headerNav{
+  background-color:#006633 ;
 
-.socialIcon{
-    margin-left: 15px;
-}
-
-.socialIcon a {
-    color: #fff;
-    margin:5px; font-size: 18px;;
 
 }
 
-.headertop a{
-    color: #fff;
+.headerNav .container{
+height: 3.0rem;
+
 }
+
+
+
+.socialSites{
+
+}
+
+.socialSites .cart-icon {
+  position: relative;
+}
+
+.socialSites .cart-icon .badge {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  font-size: 0.9em;
+}
+
+
+
+
+
 
 
 .headerNav li.nav-item .nav-link{
 color: #fff;
 font-size: 1rem;
 font-weight: 600;
-margin: 0 10px;
+margin: 0 1px;
 }
 
+.socialSites li.nav-item .nav-link{
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  margin:0;
+  }
 
-.rightSide {
-    margin-left: 3rem;
-}
+  
 
-.rightSide a{
-    display:inline-block;
-    color: #fff;
-    margin: 0 10px;
-    font-size: 1.2rem;
-}
+
 
 .headerNav a.navbar-brand{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 color: #fff;
 font-family: 'Lobster', cursive !important;
-font-size: 2.5rem;
+font-size: 2.1rem;
 text-shadow: 0px 0px 0.1px #fff, 0px 0px 0.2px #fff, 0px 0px 0.1px darkseagreen, 0.1px 0px 0.4px darkseagreen, 1px 0.1px 0.4px darkseagreen, 0px 0px 0.4px darkseagreen, 0px 0px 0.5px darkseagreen;
 }
 
-.headerNav{
-    padding: 20px 0;
-    background-color:#307245 ;
-}
+
 
 .registerTitle a{
     text-align: center;
     font-family: 'Lobster',!important;
-    font-size: 3.6rem;
+    font-size: 3.0rem;
     font-weight: 1000;
 
 }
 
 
-.navbar-toggler-icon {
-   color: white;
-}
-
-
-.userUtilities{
-    margin-right: 3rem;
-  }
-  
-  .userUtilities i{
-  color: white;
-  }
-  
-  .navColor{
-    background: #2f4235 ;
-    border-top: 2px solid rgba(17, 17, 17, 0.452);
-    border-bottom:2px solid rgba(17, 17, 17, 0.452); ;
-  }
-  
-  .cart-icon {
-    position: relative;
-  }
-  
-  .cart-icon .badge {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    font-size: 0.8em;
-  }
-
-  .searchProduct button i{
-    color: white;
-  }
-  
-  button.navbar-toggler{
-  color: rgb(192, 224, 200);
-  }
-
-  .social-icons i{
-    color: white;
-    margin-right: 0.3rem;
-    margin-left: 0.3rem;
-  }
-
-
-  .social-icons{
-    margin-left: 3rem;
-  }
-
-  div.container .nav-link:hover{
-    color: #b9f825;
-  }
-
-
-  .container-fluid i{
-    margin-left: 1.2rem;
-    margin-right:1.2rem;
-    
-  }
-
-
-  .container-fluid button{
-    margin-left: 0.3rem;
-    margin-right:0.3rem;
-    
-  }
 
 
 
-/*Arreglo de botones del navbar de arriba en pantallas de celular*/
-  @media(max-width:490px){
-    a.nav-link {
-        align-content: center;
-    }
-
-    
-  .container-fluid i{
-    margin-left: 0.51rem;
-    margin-right:0.51rem;
-    
-  }
-
-  .container-fluid button{
-    margin-left: 0.12rem;
-    margin-right:0.12rem;
-    
-  }
-  }
-
-  @media(max-width:991px){
-    
-  }
 
   .unstyled {
     color: inherit;
@@ -180,42 +87,97 @@ text-shadow: 0px 0px 0.1px #fff, 0px 0px 0.2px #fff, 0px 0px 0.1px darkseagreen,
     border: none;
   }
 
-  .headerNav .flex-row {
-    display: flex;
-    align-items: center;
-  }
-  
-  .rightSide {
-    margin-left: auto;
+
+
+  #navTitle{
+    font-size: 3.0rem;
   }
 
   .brandStyle{
   color:darkseagreen;
   font-family: 'Lobster', cursive !important;
-font-size: 2.5rem;
+  font-size: 2.4rem;
   text-shadow: 0px 0px 0.6px #fff, 0px 0px 0.6px #fff, 0px 0px 0.1px #fff, 1px 0px 0.6px #fff, 1px 0.1px 0.6px #fff, 1px 0px 0.4px #fff, 1px 0px 0.6px #fff;
   }
 
 
-  #errorMessages {
-    border: 1px solid black;
-    color: red;
-    font-size: 0.9em;
-    margin-top: 0.5em;
+ 
+
+  .navbar-brand{
+  font-size: 1rem
   }
+
+
+  /*Movil ZONE */
+
+
+
+
+
+  @media(max-width:992px){
+    .headerNav .container{
+      height: 5rem;
+    }
+    
+    }
+
+  @media(max-width:490px){
+    a.nav-link {
+
+    }
+
   
-  .userModalOptions button{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1rem;
-  }
-  .userModalOptions #changePassBtn{
-    background-color: rgb(222, 153, 127);
+
   }
 
-  .userModalOptions #userLogoutBtn{
-    background-color: rgb(162, 72, 60);
+    /*IPHONE xr  */
+    @media(max-width:414px){
+      #navTitle{
+        font-size: 2.1rem;
+      }
+    
+      .brandStyle{
+  
+      font-size: 2.5rem;
+      
+      }
+      
+    }
+
+
+/*IPHONE 6/7/8  */
+  @media(max-width:375px){
+    #navTitle{
+      font-size: 2.0rem;
+    }
+  
+    .brandStyle{
+
+    font-size: 2.2rem;
+    
+    }
+    
   }
 
-  .userModalOptions #buyHistoryBtn{
-    background-color: rgb(78, 152, 183);
+  /*IPHONE 4  */
+  @media(max-width:320px){
+    #navTitle{
+      font-size: 1.7rem;
+    }
+  
+    .brandStyle{
+
+    font-size: 1.9rem;
+    
+    }
+    
   }
+
+  
+
+  
+
+
+
+
+
